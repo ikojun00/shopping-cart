@@ -1,1 +1,114 @@
+@import "./normalize.css/normalize.css";
 
+:root 
+{
+    --header: #2E86AB;
+    --buttons: #FFA500;
+    --background: #EDEDED;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+} 
+
+nav {
+    background-color: var(--header);
+    height: 10vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 1rem 1rem;
+    color: var(--background);
+    border-radius: 5px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.homePage {
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    gap: 10rem;
+}
+
+h2 {
+    font-family: 'Belanosima', sans-serif;
+}
+
+.homePageText {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.happyEmployee > img {
+    width: 20vw;
+    height: auto;
+    border-radius: 5px;
+}
+
+.homePageText > .homePageHeader  {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.homePageText > .btnShopNow  {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: var(--buttons);
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-shape-divider-bottom-1688663230 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1688663230 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1688663230 .shape-fill {
+    fill: var(--header);
+}
