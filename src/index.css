@@ -50,7 +50,7 @@ nav a:hover {
     gap: 10rem;
 }
 
-h2 {
+h1 {
     font-family: 'Belanosima', sans-serif;
 }
 
@@ -58,12 +58,7 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 5rem;
-}
-
-.happyEmployee > img {
-    width: 20vw;
-    height: auto;
-    border-radius: 5px;
+    transform: translate(0%, -10%);
 }
 
 .homePageText > .homePageHeader  {
@@ -111,4 +106,30 @@ button {
 
 .custom-shape-divider-bottom-1688663230 .shape-fill {
     fill: var(--header);
+}
+
+.shoppingPage {
+    background-color: var(--background);
+    height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.card {
+    padding: 1rem;
+    transform: translate(20%, 20%);
+    width: 15rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.card > img {
+    width: 10rem;
+    height: auto;
 }
