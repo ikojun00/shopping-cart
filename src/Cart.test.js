@@ -4,7 +4,7 @@ import Cart from './Cart';
 
 test('renders an empty cart message', () => {
   render(<Cart items={[]} />);
-  const emptyCartMessage = screen.queryByText(/Your cart is empty/i);
+  const emptyCartMessage = screen.queryByText(/Cart is empty/i);
   expect(emptyCartMessage).toBeInTheDocument();
 });
 
