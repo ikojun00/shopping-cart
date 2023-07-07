@@ -110,15 +110,14 @@ button {
 
 .shoppingPage {
     background-color: var(--background);
-    height: 90vh;
+    min-height: 70vh;
     display: flex;
     flex-wrap: wrap;
     gap: 5rem;
+    padding: 10vh;
 }
 
 .card {
-    padding: 1rem;
-    transform: translate(20%, 20%);
     width: 15rem;
     height: 20rem;
     display: flex;
@@ -132,4 +131,24 @@ button {
 .card > img {
     width: 10rem;
     height: auto;
+}
+
+.cart {
+    display: flex;
+    justify-content: center;
+    padding: 10vh;
+    background-color: var(--background);
+    min-height: 70vh;
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+
+.cart-item > img {
+    width: auto;
+    margin-right: 2rem;
+    height: 10rem;
 }
