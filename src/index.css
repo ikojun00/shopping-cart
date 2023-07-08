@@ -43,7 +43,7 @@ nav a:hover {
 
 .homePage {
     display: flex;
-    height: 90vh;
+    min-height: 90vh;
     justify-content: center;
     align-items: center;
     background-color: var(--background);
@@ -151,4 +151,14 @@ button {
     width: auto;
     margin-right: 2rem;
     height: 10rem;
+}
+
+.cart-item > div > p {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item > div > p:has(img) {
+    cursor: pointer;
+    gap: 1rem;
 }

@@ -35,6 +35,14 @@ const App = () => {
     setCartItems(updatedItems);
   };
 
+  const handleCartItemSubtraction = (item) => {
+    const existingItemIndex = cartItems.findIndex((cartItem) => cartItem.id === item.id);
+    const updatedItems = [...cartItems];
+    if(updatedItems[existingItemIndex].quantity > 1)
+      updatedItems[existingItemIndex].quantity -= 1;
+    setCartItems(updatedItems);
+  };
+
   return (
     <>
       <nav>
@@ -54,7 +62,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/shopping" element={<ShoppingPage handleAddToCart={handleAddToCart} />} />
-        <Route path="/cart" element={<Cart items={cartItems} handleRemoveCartItem={handleRemoveCartItem}/>} />
+        <Route path="/cart" element={<Cart items={cartItems} handleRemoveCartItem={handleRemoveCartItem} 
+        handleCartItemSubtraction={handleCartItemSubtraction} handleAddToCart={handleAddToCart}/>} />
       </Routes>
     </>
   );

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CartItem from './CartItem';
 
-const Cart = ({ items, handleRemoveCartItem }) => {
+const Cart = ({ items, handleRemoveCartItem, handleCartItemSubtraction, handleAddToCart }) => {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
@@ -20,7 +20,8 @@ const Cart = ({ items, handleRemoveCartItem }) => {
         <div>
           <h2>Shopping Cart</h2>
           {items.map((item) => (
-            <CartItem key={item.id} item={item} handleRemoveCartItem={handleRemoveCartItem} />
+            <CartItem key={item.id} item={item} handleRemoveCartItem={handleRemoveCartItem} 
+            handleCartItemSubtraction={handleCartItemSubtraction} handleAddToCart={handleAddToCart}/>
           ))}
           <h2>Total: {total.toFixed(2)}€</h2>
         </div>
