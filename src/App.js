@@ -14,6 +14,7 @@ const App = () => {
   const [cartItems, setCartItems] = useState([]);
   const [cartImages, setCartImages] = useState([]);
   const [sumOfItems, setSumOfItems] = useState(0);
+  const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
 
   useEffect(() => {
     const imgs = [banana, apple, milk, bread, orange];
@@ -68,10 +69,19 @@ const App = () => {
     setCartItems(updatedItems);
   };
 
+  const toggleMobileMenu = () => {
+    setMobileMenuVisible(!mobileMenuVisible);
+  };
+
   return (
     <>
       <nav>
-        <ul>
+        <div className="hamburger-menu" onClick={toggleMobileMenu}>
+          <div className={`hamburger-line ${mobileMenuVisible ? 'active' : ''}`}></div>
+          <div className={`hamburger-line ${mobileMenuVisible ? 'active' : ''}`}></div>
+          <div className={`hamburger-line ${mobileMenuVisible ? 'active' : ''}`}></div>
+        </div>
+        <ul className={`nav-links ${mobileMenuVisible ? 'visible' : ''}`}>
           <li>
             <Link to="/">Home</Link>
           </li>
